@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto News</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon3.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="..."> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="..."
+        crossorigin="anonymous" defer></script> -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-light navbar-expand-lg ">
+
+        &nbsp;&nbsp;
+        <img src="assets/images/nav svg 2.gif" alt="Logo" width="45" height="45" class="d-inline-block align-text-top">
+        <h1>&nbsp;Crypto News</h1>
+
+        <div class="aContainer">
+            <a class="navbar-brand" id="homeLink" href="#">Home</a>
+            <a class="navbar-brand" id="reportsLink" href="#">Reports</a>
+            <a class="navbar-brand" id="aboutLink" href="#">About</a>
+        </div>
+
+        <div class="form-container">
+            <form class="d-flex" role="search">
+                <input id="inputBox" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+
+        <div class="img-container-end-nav">
+            <img src="assets/images/nav svg 2.gif" alt="Logo" width="45" height="45"
+                class="d-inline-block align-text-top">
+        </div>
+    </nav>
+
+    <br>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">You already have selected 5 coins! <br>
+                        <div> if you want to change coin press remove</div>
+                    </h5>
+
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <div class="footer-text">press on close button will remove the last coin that you choose from the list</div>
+                    <button id="modal-close-button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- error message -->
+    <div class="errorMessageDiv"></div>
+
+
+    <section id="container">
+
+
+
+    </section>
+</body>
+
+</html>
