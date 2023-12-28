@@ -2,6 +2,7 @@ body,
 html {
     text-align: center;
     background-image: url(assets/images/background.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     scroll-behavior: smooth;
@@ -24,7 +25,7 @@ nav>img:first-child {
 }
 
 .img-container-end-nav {
-    position: absolute;
+    position: fixed;
     right: 10px;
 }
 
@@ -48,7 +49,7 @@ nav>img:first-child {
 }
 
 .form-container {
-    position: absolute;
+    position: fixed;
     right: 85px;
     opacity: 0;
 }
@@ -185,14 +186,10 @@ nav>img:first-child {
 .modal-content {
     background-image: url(assets/images/background\ modal.jpg);
     background-repeat: no-repeat;
-    /* background-attachment:fixed; */
     background-size: 100% 100%;
 }
 
 .modal-body {
-    /* display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-around; */
     text-align: center;
     text-wrap: wrap;
 }
