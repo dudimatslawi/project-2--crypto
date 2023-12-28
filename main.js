@@ -168,7 +168,25 @@
         const container = document.getElementById("container")
         inputDiv.style.opacity = 0
 
-        container.innerHTML = "about"
+        container.innerHTML = `
+        <div class="about-container">
+            <img class="currencies-svg" src="assets/images/about image.png">
+            <img class="my-image" src="assets/images/about image2.webp.png">
+            <p>
+            Hello all!<br>
+            My name is dudi matslawi and i am a software developer at the beginning of my career.<br>
+            During the course i'm on, i was asked to develop a website about crypto currencies.<br>
+            In my website you can find and update about the most popular digital currencies in the market today and even check their value(by dollar, euro, shekel).
+            In addition to that you also can choose your 5 favorite digital currencies and receive updates and reports about them in real time.
+            <br><br>
+            <strong>To order my services, contact me: 052-6492011</strong>
+
+
+
+
+            
+            </p>
+        <div>`
     }
 
     // get json data from api
@@ -253,8 +271,8 @@
         }
     }
 
-    
-    
-    
+
+
+
 })()
 

@@ -230,6 +230,34 @@ h5>div {
     position: absolute;
     left: 50px;
 }
+.about-container{
+    border: 1px solid black;
+    margin: 20px;
+    color: white;
+    background-color: rgba(121, 159, 196, 0.603);
+    text-align: left;
+    font-size: 35px;
+    font-family: cursive;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px;
+}
+.my-image{
+    float: right;
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
+}
+.about-container > p{
+    margin-top: 20px;
+    margin-left: 30px;
+    text-shadow: 2px 2px black;
+}
+.currencies-svg{
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin: 40px;
+}
 
 
 @font-face {
