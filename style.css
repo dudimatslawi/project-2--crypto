@@ -3,9 +3,29 @@ html {
     text-align: center;
     background-image: url(assets/images/background.png);
     background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+marquee {
+    background-color: rgb(10, 1, 1);
+    color: white;
+    position: fixed;
+    padding: 3px;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+.marquee-coins-span {
+    margin-left: 300px;
+}
+
+.marquee-image {
+    width: 20px;
+    height: 20px;
 }
 
 h1 {
@@ -18,16 +38,12 @@ nav {
 }
 
 
-nav>img:first-child {
-    margin-left: 10px;
+#navbarSupportedContent>img {
     height: 60px;
     width: 70px;
+
 }
 
-.img-container-end-nav {
-    position: fixed;
-    right: 10px;
-}
 
 .img-container-end-nav>img {
     height: 60px;
@@ -48,8 +64,21 @@ nav>img:first-child {
     font-size: x-large;
 }
 
+.aContainer>a.active {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.img-container-end-nav {
+    position: absolute;
+    right: 10px;
+}
+
 .form-container {
-    position: fixed;
+    position: absolute;
     right: 85px;
     opacity: 0;
 }
@@ -68,8 +97,12 @@ nav>img:first-child {
     background-color: rgba(121, 159, 196, 0.603);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .card:hover {
-    bottom: 10px;
+    background-color: rgba(121, 159, 196, 0.9);
 }
 
 .card>* {
@@ -90,8 +123,31 @@ nav>img:first-child {
     animation: half-rotation 1s linear;
 }
 
+#reportsErrorMessage {
+    width: 70%;
+    height: 200px;
+    border: 1px solid;
+    margin: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: xx-large;
+    margin-top: 7%;
+    background-color: rgb(65, 81, 161, 0.8);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px;
+    animation: bounce 1s;
+}
+
+#reportsErrorMessage img {
+    width: 50px;
+    height: 50px;
+    margin: 40px;
+}
+
 .errorDiv {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .errorDiv>h2 {
@@ -196,8 +252,8 @@ nav>img:first-child {
 
 h5 {
     color: white;
-    font-size:xx-large;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h5>div {
@@ -215,21 +271,25 @@ h5>div {
     background-color: rgba(153, 183, 214, 0.803);
 
 }
-.modal-body > .card > .card-symbol-div{
+
+.modal-body>.card>.card-symbol-div {
     margin-top: 0;
-} 
-.remove-button{
+}
+
+.remove-button {
     margin-top: 10px;
 }
-.footer-text{
+
+.footer-text {
     color: white;
     font-size: larger;
     position: absolute;
     left: 50px;
 }
-.about-container{
+
+.about-container {
     border: 1px solid black;
-    margin: 20px;
+    margin: 50px;
     color: white;
     background-color: rgba(121, 159, 196, 0.603);
     text-align: left;
@@ -238,24 +298,79 @@ h5>div {
     border-radius: 30px;
     box-shadow: 5px 5px 5px;
 }
-.my-image{
+
+.my-image {
     float: right;
-    width: 400px;
-    height: 400px;
+    width: 60vh;
+    height: 57vh;
+    border: 2px solid;
+    border-radius: 50%;
     margin-right: 50px;
+    margin-top: 20px;
 }
-.about-container > p{
+
+.about-container>p {
     margin-top: 20px;
     margin-left: 30px;
     text-shadow: 2px 2px black;
 }
-.currencies-svg{
-    height: 150px;
-    width: 150px;
+
+.currencies-svg {
+    height: 23.5vh;
+    width: 23.5vh;
     float: left;
     margin: 40px;
 }
 
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    animation: pulse 1s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: scaleUp 1s linear infinite;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: translate(-50%, -50%) scale(0)
+    }
+
+    60%,
+    100% {
+        transform: translate(-50%, -50%) scale(1)
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    60%,
+    100% {
+        transform: scale(1)
+    }
+
+    80% {
+        transform: scale(1.2)
+    }
+}
 
 @font-face {
     font-family: 'h1font';
@@ -282,5 +397,70 @@ h5>div {
 
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
+
+    37% {
+        transform: translateX(5px);
+        timing-function: ease-out;
+    }
+
+    55% {
+        transform: translateX(-5px);
+        timing-function: ease-in;
+    }
+
+    73% {
+        transform: translateX(4px);
+        timing-function: ease-out;
+    }
+
+    82% {
+        transform: translateX(-4px);
+        timing-function: ease-in;
+    }
+
+    91% {
+        transform: translateX(2px);
+        timing-function: ease-out;
+    }
+
+    96% {
+        transform: translateX(-2px);
+        timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .img-container-end-nav {
+        position: relative;
+        width: 100%;
+        right: 0;
+    }
+
+    .form-container {
+        text-align: center;
+        position: relative;
+        right: 0;
+        margin-top: 10px;
+    }
+
+    .footer-text {
+        left: 30px;
+        font-size: medium;
+        width: 300px;
     }
 }
